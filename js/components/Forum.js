@@ -35,10 +35,7 @@ class Forum extends React.Component {
   }
 
   _onAddAnswer(answerText) {
-    ForumDispatcher.dispatch(({
-      actionType: 'FORUM_ANSWER_ADDED',
-      newAnswer: answerText
-    }));
+    ForumActions.addAnswer(answerText)
   }
 
   _onChange() {

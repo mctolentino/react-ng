@@ -1,10 +1,7 @@
 class ForumAnswers extends React.Component {
 
   _onMarkCorrect(id) {
-    ForumDispatcher.dispatch(({
-      actionType: 'FORUM_ANSWER_MARKED_CORRECT',
-      id: id
-    }));
+    ForumActions.markAsCorrect(id);
   }
 
   render() {

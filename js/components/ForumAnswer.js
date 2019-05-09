@@ -7,12 +7,16 @@ class ForumAnswer extends React.Component {
 
   render() {
     const answer = this.props.answer;
-    let markAnswer
+    let markAnswer;
 
     if (!answer.correct) {
-      markAnswer = <div className="float-right">
-        <small><a href="#" onClick={this._markCorrect}>Mark as correct</a></small>
-      </div>
+      markAnswer = (
+        <div className="float-right">
+          <small>
+            <a href="#" onClick={this._markCorrect}>Mark as correct</a>
+          </small>
+        </div>
+      )
     }
 
     let classNames = "card-body";
